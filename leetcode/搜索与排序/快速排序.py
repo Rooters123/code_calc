@@ -24,16 +24,16 @@ def sort_calc(alist,start,end):
     high = end
     while low < high:
         # while low < high and alist[high] >= mid:
-        while low < high and alist[high] >= mid:
+        while low < high and alist[high] < mid:
             high -= 1
         alist[low] = alist[high]
 
-        while low< high and alist[low] <= mid:
+        while low< high and alist[low] >= mid:
             low += 1
         alist[high] = alist[low]
 
     alist[low] =  mid
-    print(alist)
+    # print(alist)
     sort_calc(alist,start,low - 1)
     sort_calc(alist,low + 1,end)
 

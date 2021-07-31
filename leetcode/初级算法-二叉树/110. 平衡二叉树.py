@@ -13,7 +13,7 @@ class Solution:
         self.flag = 0
     def isBalanced(self, root: TreeNode) -> bool:
         # 从底向上，判断左右子树的高度
-        if not  root:
+        if not root:
             return True
         self.balanceLever(root)
         if self.flag == -1:
